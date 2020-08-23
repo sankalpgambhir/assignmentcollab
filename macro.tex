@@ -1,0 +1,43 @@
+% define general format and includes for all assignments
+\documentclass[10pt, largemargins]{../homework}
+\usepackage{geometry}
+
+% import req basic packages
+\usepackage[dvipsnames]{xcolor}
+\usepackage[tracking=true]{microtype}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage[utf8]{inputenc}
+\usepackage{braket}
+
+
+% set font
+\usepackage[T1]{fontenc}
+\usepackage{baskervillef}
+\usepackage[varqu,varl,var0]{inconsolata}
+\usepackage[scale=.95,type1]{cabin}
+\usepackage[baskerville,vvarbb]{newtxmath}
+\usepackage[cal=boondoxo]{mathalfa}
+
+
+% reviews and notes
+\ifthenelse{\value{draft} > 0}
+{
+  \newcommand{\yourname}[1]{\textcolor{WildStrawberry}{$\left[\textnormal{Parth: #1}\right]$}}
+}
+{
+  \newcommand{\yourname}[1]{}
+}
+
+% homework class and document settings
+\newcommand{\hwname}{NAME}
+\newcommand{\hwemail}{\texttt{EMAIL/DETAILS}}
+\newcommand{\hwtype}{Assignment}
+\newcommand{\hwnum}{0} % default number
+\newcommand{\hwdate}{\today} % default to today if no submission date specified 
+\newcommand{\hwclass}{COURSE}
+\newcommand{\hwlecture}{}
+\newcommand{\hwsection}{}
